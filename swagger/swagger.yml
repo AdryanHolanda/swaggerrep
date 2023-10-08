@@ -35,3 +35,30 @@ paths:
             application/json:
               example:
                 error: Internal server error
+
+/movies:
+    get:
+      summary: Obter todos os filmes
+      description: Recupera uma lista de todos os filmes.
+      operationId: getAllMovies
+      responses:
+        '200':
+          description: Lista de filmes obtida com sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Filme'
+       '400':
+          description: Bad request
+          content:
+            application/json:
+              example:
+                error: Bad request
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              example:
+                error: Internal server error
