@@ -49,7 +49,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Filme'
+                  $ref: '#/components/schemas/Movie'
        '400':
           description: Bad request
           content:
